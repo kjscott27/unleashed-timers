@@ -1,0 +1,7 @@
+assets
+build
+dist
+
+.expo/*
+package/*
+tsconfig/*

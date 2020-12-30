@@ -14,13 +14,12 @@ const App = () => {
     return null;
   }
 
-
   return (
     <SafeAreaProvider>
       <Navigation colorScheme={colorScheme} />
       <StatusBar />
     </SafeAreaProvider>
-  )
-}
+  );
+};
 
 export default App;

@@ -23,9 +23,9 @@ const config = {
     },
     NotFound: '*',
   },
-}
+};
 
 export default {
   prefixes: [Linking.makeUrl('/')],
-  config
+  config,
 };

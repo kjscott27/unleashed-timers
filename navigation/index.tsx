@@ -1,6 +1,10 @@
 import { ColorSchemeName } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from '@react-navigation/native';
 import * as React from 'react';
 
 import { RootStackParamList } from '../types';
@@ -23,6 +27,10 @@ const Stack = createStackNavigator<RootStackParamList>();
 const RootNavigator = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
     <Stack.Screen name="Root" component={BottomTabNavigator} />
-    <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+    <Stack.Screen
+      name="NotFound"
+      component={NotFoundScreen}
+      options={{ title: 'Oops!' }}
+    />
   </Stack.Navigator>
 );

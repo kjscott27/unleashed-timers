@@ -7,10 +7,13 @@ import { useThemeColor } from './state/helpers';
 type ViewProps = ThemeProps & DefaultView['props'];
 
 export const ThemedView = (props: ViewProps) => {
-    const { style, lightColor, darkColor, ...otherProps } = props;
-    const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor(
+    { light: lightColor, dark: darkColor },
+    'background',
+  );
 
-    return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
-}
+  return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
+};
 
 export default ThemedView;

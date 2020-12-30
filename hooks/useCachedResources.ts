@@ -15,7 +15,8 @@ const useCachedResources = () => {
         // Load fonts
         await Font.loadAsync({
           ...Ionicons.font,
-          'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+          'space-mono':
+            require('../assets/fonts/SpaceMono-Regular.ttf') || null,
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
@@ -24,12 +25,12 @@ const useCachedResources = () => {
         setLoadingComplete(true);
         SplashScreen.hideAsync();
       }
-    }
+    };
 
     loadResourcesAndDataAsync();
   }, []);
 
   return isLoadingComplete;
-}
+};
 
 export default useCachedResources;
