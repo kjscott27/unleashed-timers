@@ -20,7 +20,8 @@ const BottomTabNavigator = () => {
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
+    >
       <BottomTab.Screen
         name="Home"
         component={HomeTabNavigator}
@@ -48,6 +49,8 @@ const BottomTabNavigator = () => {
 
 export default BottomTabNavigator;
 
+// TODO: look into why this is erroring in the first place, should be fince since this is directly from Expo's creation process
+// @ts-ignore
 const TabBarIcon = (props: { name: string; color: string }) => <Ionicons size={20} style={{ marginBottom: -3 }} {...props} />;
 
 const HomeTabStack = createStackNavigator<HomeTabParamList>();

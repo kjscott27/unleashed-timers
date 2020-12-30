@@ -4,14 +4,19 @@ const config = {
   screens: {
     Root: {
       screens: {
-        TabOne: {
+        Home: {
           screens: {
-            TabOneScreen: 'one',
+            HomeTabScreen: 'home',
           },
         },
-        TabTwo: {
+        Bosses: {
           screens: {
-            TabTwoScreen: 'two',
+            BossesTabScreen: 'bosses',
+          },
+        },
+        Settings: {
+          screens: {
+            SettingsTabScreen: 'settings',
           },
         },
       },
