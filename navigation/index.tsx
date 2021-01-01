@@ -7,7 +7,7 @@ import {
 } from '@react-navigation/native';
 import * as React from 'react';
 
-import { RootStackParamList } from '../types';
+import { RootStackParamList } from './state/types';
 
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';

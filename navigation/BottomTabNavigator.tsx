@@ -8,7 +8,7 @@ import {
   HomeTabParamList,
   BossesTabParamList,
   SettingsTabParamList,
-} from '../types';
+} from './state/types';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
