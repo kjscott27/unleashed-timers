@@ -13,11 +13,8 @@ export const formatBossesForList = ():
   const filteredResults = [];
 
   for (const [key, value] of Object.entries(filterBossesByRegion())) {
-    console.log(key, value);
     filteredResults.push({ title: key, data: value });
   }
-
-  console.log(filteredResults);
 
   return filteredResults;
 };
