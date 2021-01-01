@@ -1,9 +1,9 @@
-import type { BossesArray } from './types/Bosses.types';
+import type { BossesArray } from '../types/Bosses.types';
 
 import { REGIONS } from './Regions';
 import { SPAWN_RATE, SPAWN_TYPE } from './Spawns';
 
-const allBosses: BossesArray = [
+export const allBosses: BossesArray = [
   {
     name: 'Wolf King',
     region: REGIONS.CARACAZOR,
@@ -244,7 +244,7 @@ const allBosses: BossesArray = [
   },
   {
     name: 'Stone Zephyr',
-    region: REGIONS.BEORA,
+    region: REGIONS.BEORAN,
     spawnTime: 15,
     spawnType: SPAWN_TYPE.DAILY,
     spawnRate: SPAWN_RATE.MINUTES,
@@ -341,11 +341,3 @@ const allBosses: BossesArray = [
     spawnRate: SPAWN_RATE.MINUTES,
   },
 ];
-
-export const alphabeticalBosses = [{}];
-
-export const regionalBosses = [];
-
-export const weeklyBosses = [{}];
-
-export const dailyBosses = [{}];

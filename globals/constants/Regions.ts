@@ -1,4 +1,4 @@
-import type { RegionEnum } from './types/Regions.types';
+import type { RegionEnum } from '../types/Regions.types';
 
 export const REGIONS: { [key: string]: RegionEnum } = Object.freeze({
   BEORAN: 'Beoran',

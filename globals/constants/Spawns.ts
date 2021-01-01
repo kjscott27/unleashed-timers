@@ -1,4 +1,4 @@
-import type { SpawnRate, SpawnType } from './types/Spawns.types';
+import type { SpawnRate, SpawnType } from '../types/Spawns.types';
 
 export const SPAWN_TYPE: { [key: string]: SpawnType } = Object.freeze({
   DAILY: 'Daily',

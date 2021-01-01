@@ -1,34 +1,45 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, SectionList } from 'react-native';
 
-import ThemedView from '../components/ThemedView';
+import { formatBossesForList } from './../globals/helpers';
+
 import ThemedText from '../components/ThemedText';
+import ThemedView from '../components/ThemedView';
 
-const TabTwoScreen = () => (
-  <ThemedView style={styles.container}>
-    <ThemedText style={styles.title}>Tab Two</ThemedText>
-    <ThemedView
-      style={styles.separator}
-      lightColor="#eee"
-      darkColor="rgba(255,255,255,0.1)"
-    />
-  </ThemedView>
-);
+const TabTwoScreen = () => {
+  return (
+    <ThemedView style={styles.container}>
+      <SectionList
+        keyExtractor={(item, index) => `${item.name} + ${index}`}
+        sections={formatBossesForList()}
+        renderItem={({ item }) => (
+          <ThemedText style={styles.item}>{item.name}</ThemedText>
+        )}
+        renderSectionHeader={({ section: { title } }) => (
+          <ThemedText style={styles.title}>{title}</ThemedText>
+        )}
+        style={styles.list}
+      />
+    </ThemedView>
+  );
+};
 export default TabTwoScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
+    flex: 1,
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  item: {
+    fontSize: 16,
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  list: {
+    width: '100%',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    padding: 20,
   },
 });

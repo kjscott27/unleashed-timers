@@ -10,8 +10,8 @@ import {
   SettingsTabParamList,
 } from './state/types';
 
-import Colors from '../constants/Colors';
-import useColorScheme from '../hooks/useColorScheme';
+import Colors from '../globals/constants/Colors';
+import useColorScheme from '../globals/hooks/useColorScheme';
 
 import Bosses from '../screens/Bosses';
 import Home from '../screens/Home';

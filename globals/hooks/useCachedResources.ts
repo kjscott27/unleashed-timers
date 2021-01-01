@@ -16,7 +16,7 @@ const useCachedResources = () => {
         await Font.loadAsync({
           ...Ionicons.font,
           'space-mono':
-            require('../assets/fonts/SpaceMono-Regular.ttf') || null,
+            require('../../assets/fonts/SpaceMono-Regular.ttf') || null,
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
